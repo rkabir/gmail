@@ -5,7 +5,7 @@ description:
   A Rubyesque interface to Gmail, with all the tools you will need.
   Search, read and send multipart emails; archive, mark as read/unread,
   delete emails; and manage labels.
-  
+
 license: MIT
 authors: Chris Kowalik
 email: chris@nu7hat.ch
