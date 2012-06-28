@@ -15,6 +15,22 @@ begin
     gem.add_dependency 'mail'
     gem.add_dependency 'gmail_xoauth'
   end
-rescue LoadError
-  puts "Jeweler not available. Install it with: gem install jeweler"
+end
+
+task :test => :spec
+task :default => :test
+
+begin 
+  require 'metric_fu'
+rescue LoadError => e
+  STDERR.puts e.message
+  STDERR.puts "Run `gem install metric_fu` to install Metric-Fu"
+end
+
+require 'rake/rdoctask'
+Rake::RDocTask.new do |rdoc|
+  rdoc.rdoc_dir = 'rdoc'
+  rdoc.title = "Gmail for Ruby #{Gmail.version}"
+  rdoc.rdoc_files.include('README*')
+  rdoc.rdoc_files.include('lib/**/*.rb')
 end

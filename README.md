@@ -24,6 +24,8 @@ Extra thanks for specific feature contributions from:
 * [Mikkel Malmberg](http://github.com/mikker)
 * [Julien Blanchard](http://github.com/julienXX)
 * [Federico Galassi](http://github.com/fgalassi)
+* [Alex Genco](http://github.com/alexgenco)
+* [Justin Grevich](http://github.com/jgrevich)
 
 ## Installation
 
@@ -31,7 +33,7 @@ You can install it easy using rubygems:
 
     sudo gem install gmail
     
-Or install it manualy:
+Or install it manually:
 
     git clone git://github.com/nu7hatch/gmail.git
     cd gmail
@@ -213,11 +215,11 @@ Create new label:
     
 Remove labels:
 
-    gmail.labels.delete("Uregent")
+    gmail.labels.delete("Urgent")
     
 Or check if given label exists:
 
-    gmail.labels.exists?("Uregent") # => false
+    gmail.labels.exists?("Urgent") # => false
     gmail.labels.exists?("AnotherOne") # => true
 
 ### Composing and sending emails
